@@ -5,18 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>Frontend Mentor | Todo app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
+<body class="bg-white dark:bg-black" id="body">
 
-  Todo
+  <main class="w-full flex justify-center items-center lg:w-full lg:h-[300px] light_picture" id="main-image">
+    <div class="grid grid-cols-3 gap-10">
+      <!-- TODO APP TITTLE -->
+      <h1 class="text-white text-4xl tracking-wider">TODO</h1>
+      <!-- ICONO DIV-->
+      <div class="relative col-start-3 col-end-4 cursor-pointer" >
+        <!-- ICONO IMAGE // SUN // MOON -->
+        <img class="block w-[30px] h-[30px] absolute -right-10 bottom-0" src="./images/icon-moon.svg" alt="" id="icon">
+      </div>
+      <input class="pl-10 py-4 col-span-4 rounded-md" type="text" placeholder="Create a new todo..." id="input">
+    </div>
+  </main>
+
+  <section class="w-full h-[400px] relative flex justify-center">
+    <div class="w-[431px] h-[300px] absolute bg-white -top-16 rounded-md" id="notes">
+      <li class="w-full list-none">
+        <div class="flex justify-between w-full px-6 py-2">
+          <button class="w-[16px] h-[16px] border border-black rounded-full"></button>
+          <p> Hola</p>
+          <img class="w-[16px] h-[16px] " src="./images/icon-cross.svg" alt="">
+        </div>
+      </li>
+    </div>
+  </section>
+
+  
+
+ 
 
   <!-- Add dynamic number --> items left
 
@@ -32,5 +55,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="./js/script.js"></script>
 </body>
 </html>
