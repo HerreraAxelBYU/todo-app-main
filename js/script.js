@@ -10,25 +10,46 @@ const notas = document.querySelector('#notes');
 icono.addEventListener('click', () => {
 
     let p = document.querySelectorAll('p');
-
+    let buttons = document.querySelectorAll('button');
     // AÑADIENDO ESTILOS DARK
     body.classList.toggle('bg-[#161722]');
     main.classList.toggle('dark_picture');
     input.classList.toggle('bg-[#25273C]');
     notas.classList.toggle('bg-[#25273C]');
     
-    p.forEach(notita => {
-        notita.classList.toggle('text-[#CACDE8]');
-    });
+    
 
-    console.log(p)
+    
 
     // CAMBIAR ICONOS -- LUNA / SOL 
     if (icono.src === 'http://127.0.0.1:5500/images/icon-moon.svg') {
         icono.src = '/images/icon-sun.svg'
+
+        p.forEach(notita => {
+            notita.classList.remove('text-[#161722]');
+            notita.classList.add('text-[#CACDE8]');
+            //console.log(notita)
+        });
+
+        buttons.forEach(botones => {
+            botones.classList.remove('border-black');
+            botones.classList.add('border-[#CACDE8]');
+        })
         
     } else if (icono.src === 'http://127.0.0.1:5500/images/icon-sun.svg') {
         icono.src = '/images/icon-moon.svg';
+
+        p.forEach(notita => {
+            notita.classList.remove('text-[#CACDE8]');
+            notita.classList.add('text-[#161722]');
+            //console.log(notita)
+        });
+
+        buttons.forEach(botones => {
+            botones.classList.remove('border-[#CACDE8]');
+            botones.classList.add('border-black');
+        })
+
     }
 
 });
