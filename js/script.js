@@ -6,23 +6,27 @@ const input = document.querySelector('#input');
 const notas = document.querySelector('#notes');
 
 
-
 // ACTIVAR DARK MODE
 icono.addEventListener('click', () => {
 
+    let p = document.querySelectorAll('p');
 
     // AÑADIENDO ESTILOS DARK
     body.classList.toggle('bg-[#161722]');
     main.classList.toggle('dark_picture');
     input.classList.toggle('bg-[#25273C]');
     notas.classList.toggle('bg-[#25273C]');
-
     
+    p.forEach(notita => {
+        notita.classList.toggle('text-[#CACDE8]');
+    });
 
+    console.log(p)
 
     // CAMBIAR ICONOS -- LUNA / SOL 
     if (icono.src === 'http://127.0.0.1:5500/images/icon-moon.svg') {
         icono.src = '/images/icon-sun.svg'
+        
     } else if (icono.src === 'http://127.0.0.1:5500/images/icon-sun.svg') {
         icono.src = '/images/icon-moon.svg';
     }
@@ -54,6 +58,7 @@ function agregarNotas(parrafo) {
     // CREAR ELEMENTOS
     let lista = document.createElement('li');
     let div = document.createElement('div');
+    let div2 = document.createElement('div');
     let button = document.createElement('button');
     let paragraph = document.createElement('p');
     let img = document.createElement('img');
@@ -63,6 +68,8 @@ function agregarNotas(parrafo) {
     div.classList.add('w-full', 'flex', 'justify-between', 'px-6', 'py-2');
     button.classList.add('w-[16px]', 'h-[16px]', 'border', 'border-black', 'rounded-full');
     img.classList.add('w-[16px]', 'h-[16px]');
+    paragraph.classList.add('text-[#161722]');
+
 
     // VALOR DE LA NOTA A AGREGAR
     paragraph.textContent = parrafo;
