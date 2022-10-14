@@ -1,16 +1,1 @@
 
-.light_picture {
-    background-image: url('/images/bg-desktop-light.jpg');
-}
-
-.dark_picture {
-    background-image: url('/images/bg-desktop-dark.jpg');
-}
-
-.mostrar {
-    display: block;
-}
-
-.oculto {
-    display: none;
-}

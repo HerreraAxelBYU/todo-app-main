@@ -5,38 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./scss/style.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Frontend Mentor | Todo app</title>
 
 </head>
-<body class="bg-white dark:bg-black" id="body">
+<body class="" id="body">
 
-  <main class="w-full flex justify-center items-center lg:w-full lg:h-[300px] light_picture" id="main-image">
-    <div class="grid grid-cols-3 gap-10">
-      <!-- TODO APP TITTLE -->
-      <h1 class="text-white text-4xl tracking-wider">TODO</h1>
-      <!-- ICONO DIV-->
-      <div class="relative col-start-3 col-end-4 cursor-pointer" >
+  <main class="container" id="main-image">
+    <!-- CONTENEDOR DE "TODO"/ ICONO / INPUT -->
+    <div class="container__2">
+      <div class="container__3" >
+        <h1 class="title">TODO</h1>
         <!-- ICONO IMAGE // SUN // MOON -->
-        <img class="block w-[30px] h-[30px] absolute -right-10 bottom-0" src="./images/icon-moon.svg" alt="" id="icon">
+        <img class="" src="./images/icon-sun.svg" alt="" id="icon">
       </div>
-      <input class="pl-10 py-4 col-span-4 rounded-md" type="text" placeholder="Create a new todo..." id="input">
+      <div class="container__4">
+        <button class="button"></button>
+        <input class="" type="text" placeholder="Create a new todo..." id="input">
+      </div>
+      
     </div>
   </main>
 
-  <section class="w-full h-[400px] relative flex justify-center">
-    <div class="w-[431px] h-[300px] absolute bg-white -top-16 rounded-md" id="notes">
-      <li class="w-full list-none border border-b-neutral-600">
-        <div class="flex justify-between w-full px-6 py-2" id="div_p">
-          <button class="w-[16px] h-[16px] border border-black rounded-full"></button>
-          <div class="w-full flex justify-start pl-4">
-            <p> Hola</p>
+  <section class="section__notes">
+    <div class="notes__container" id="notes">
+      <ul>
+        <li class="li_notes">
+          <div class="" id="div_p">
+            <button class=""></button>
+            <div class="">
+              <p> Hola</p>
+            </div>
+         
+            <img class="" src="./images/icon-cross.svg" alt="">
           </div>
-          
-          <img class="w-[16px] h-[16px] " src="./images/icon-cross.svg" alt="">
-        </div>
-      </li>
+        </li>
+      </ul> 
     </div>
   </section>
 

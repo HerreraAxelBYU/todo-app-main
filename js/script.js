@@ -17,9 +17,7 @@ icono.addEventListener('click', () => {
     input.classList.toggle('bg-[#25273C]');
     notas.classList.toggle('bg-[#25273C]');
     
-    
 
-    
 
     // CAMBIAR ICONOS -- LUNA / SOL 
     if (icono.src === 'http://127.0.0.1:5500/images/icon-moon.svg') {
